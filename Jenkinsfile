@@ -15,5 +15,5 @@ def app
     docker.withRegistry('http://registry.hub.docker.com','docker-cred'){
     app.push('Dev')
     }
-  }
+  } 
 }
