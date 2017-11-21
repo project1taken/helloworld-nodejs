@@ -8,7 +8,7 @@ app.use(express.static(__dirname + '/public'))
 
 function get_trustyou(trust_you_id, callback) {
     var options = {
-        uri : 'http://127.0.0.1:5005/'+trust_you_id,
+        uri : 'http://ec2-34-228-238-3.compute-1.amazonaws.com:5000/'+trust_you_id,
         method : 'GET'
     };
     var res = '';
