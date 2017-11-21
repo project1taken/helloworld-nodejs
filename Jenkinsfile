@@ -16,4 +16,8 @@ def app
     app.push('Dev')
     }
   }
+  stage ('Deploy'){
+    sh 'ssh ec2-user@ec2-34-228-238-3.compute-1.amazonaws.com docker pull rvarg11/nodejsapp:Dev'
+    sh 'ssh ec2-user@ec2-34-228-238-3.compute-1.amazonaws.com docker run -d -p 3000:3000 --name ndoejsapp rvarg11/nodejsapp:Dev'
+  }
 }
