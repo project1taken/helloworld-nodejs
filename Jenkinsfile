@@ -18,7 +18,7 @@ def app
   }
   stage ('Deploy'){
     sh 'ssh ec2-user@ec2-107-20-66-27.compute-1.amazonaws.com docker pull rvarg11/nodejsapp:Staging'
-//    sh 'ssh ec2-user@ec2-107-20-66-27.compute-1.amazonaws.com docker rm -f ndoejsapp'
+    sh 'ssh ec2-user@ec2-107-20-66-27.compute-1.amazonaws.com docker rm -f ndoejsapp'
     sh 'ssh ec2-user@ec2-107-20-66-27.compute-1.amazonaws.com docker run -d -p 3000:3000 --name ndoejsapp rvarg11/nodejsapp:Staging'
   }
 }
